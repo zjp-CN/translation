@@ -5,13 +5,13 @@ multilingual = false
 src = "src"
 title = "blogs"
 
-[preprocessor.theme]
-pagetoc = true
-sidebar-width = "250px"
+# [preprocessor.theme]
+# pagetoc = true
+# sidebar-width = "250px"
 
 [output.html]
 default-theme = "ayu"
-git-repository-url = ""
+git-repository-url = "https://github.com/zjp-CN/translation"
 additional-css = ["theme/pagetoc.css"]
 additional-js = ["theme/pagetoc.js"]
 
@@ -24,7 +24,7 @@ editable = true
 
 [output.html.print]
 enable = false
-
-[output.theme-ace]
-theme-white = "xcode"
-theme-dark = "monokai"
+ 
+# [output.theme-ace]
+# theme-white = "xcode"
+# theme-dark = "monokai"
