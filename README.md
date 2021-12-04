@@ -1,5 +1,8 @@
 # 说明
 
+[<img alt="github" src="https://img.shields.io/github/license/zjp-CN/translation?color=blue" height="20">](https://github.com/zjp-CN/translation)
+[![github pages](https://github.com/zjp-CN/translation/actions/workflows/deploy.yml/badge.svg)](https://github.com/zjp-CN/translation/actions/workflows/deploy.yml)
+
 [苦瓜小仔](https://github.com/zjp-CN) 翻译的博文。
 
 翻译的书籍：
