@@ -453,7 +453,7 @@ non-owning "multicast" 式引用）。
 # 感谢
 
 感谢 [Robin Pederson][Robin Pederson]和 [telios][telios] 
-的校对和建议，他们在理清文章上提出了各种建议；感谢 [Milou][Milou] 从 C++ 的角度提出了提出的批评和建议。
+的校对和建议，他们在理清文章上提出了各种建议；感谢 [Milou][Milou] 从 C++ 的角度提出的批评和建议。
 
 [Robin Pederson]: https://hashnode.com/@TheBerkin 
 [telios]: https://hashnode.com/@telios 
