@@ -3,7 +3,10 @@
 ![](https://blog.schichler.dev/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1637755591169%2FOMsBWv8Bc.png%3Fw%3D1600%26h%3D840%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp&w=3840&q=75)
 
 由 [Tamme Schichler](https://hashnode.com/@Tamme) 所写，发布于 2021 年 11 月 25 日，预计阅读完需要 15 分钟。
-[点击查看原文](https://blog.schichler.dev/pinning-in-plain-english-ckwdq3pd0065zwks10raohh85)。
+[点击查看原文][original-post]，以及原文的[讨论][discussion]。
+
+[original-post]: https://blog.schichler.dev/pinning-in-plain-english-ckwdq3pd0065zwks10raohh85
+[discussion]: https://users.rust-lang.org/t/pinning-in-plain-english/67992
 
  > 标题图像显示在木质砧板上放着一个橙色的甜椒。
  > 
