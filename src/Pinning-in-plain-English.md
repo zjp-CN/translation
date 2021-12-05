@@ -167,8 +167,6 @@ pub fn pin(x: T) -> Pin<Box<T>> { … }
 [pointers]: https://doc.rust-lang.org/stable/std/primitive.pointer.html
 [`NonNull`]: https://doc.rust-lang.org/stable/core/ptr/struct.NonNull.html
 
-In fact, the only type that is explicitly `!Unpin` as of stable Rust 1.56, including in custom crates, is [`core::marker::PhantomPinned`](https://doc.rust-lang.org/stable/core/marker/struct.PhantomPinned.html), a marker you can use as member type to make your custom type `!Unpin`.
-
 事实上，从 stable Rust 1.56 开始，包括自定义 crates 在内，唯一显式为 `!Unpin` 的类型是
 [`core::marker::PhantomPinned`]，这是一个可以作为成员类型的标记 (marker)，用于使你的自定义类型为
 `!Unpin` 的[^!Unpin-PhantomPinned]。
@@ -305,7 +303,7 @@ Rust 使包装在 `Pin<_>` 中的自定义类型更容易添加方法，上述�
 |（译者注）|pin 住值的指针|pin 住元素的集合|被 pinned 住的值|
 |`: Unpin`|几乎总是|很多时候是|实践中几乎不是，因为 pin 住 `T: Unpin` 是没意义的|
 |无 pinning 的 APIs 可以访问| 可以访问 `Pin<&T>` 或者 `Pin<&mut T>`|视情况而定，但通常与 `Pin<P>` 类似|由参数为 `Pin<&T>` 或 `Pin<&mut T>` 的函数决定|
-|pinning 之后 APIs 不能访问|不能访问 `&mut T`、unwrap `T` |视情况而定，但通常不能访问 `&mut T`、remove T、任何涉及重新分配 `T` 的事|由参数为 `&mut T` 的函数决定|
+|pinning 之后的 APIs 不能访问|不能访问 `&mut T`、unwrap `T` |视情况而定，但通常不能访问 `&mut T`、remove T、任何涉及重新分配 `T` 的事|由参数为 `&mut T` 的函数决定|
 |未变的 APIs （例子）|访问 `&T`|访问`&T`、drop `T` in place|由参数为 `&T` 的函数决定|
 |`: Clone`|通常是 |有可能是 |当 `T: Clone`[^Clone-T] 是|视情况而定|
 
@@ -464,7 +462,7 @@ non-owning "multicast" 式引用）。
 本文整体上受 [CC BY-NC-SA 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/)
 许可（引文除外）。所有的代码示例（即格式为像 `this` 的代码块和代码片段）都是在
 [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
-下额外授权的，引文除外。因此你可以在任何许可或无许可的情况下，在你的项目中自由使用。
+下额外授权的，引文除外。因此你可以在任何许可或无许可的情况下，自由使用。
 
 来自 Rust 官方项目的引文保留了其原始的 `MIT OR Apache-2.0` 许可，并在 
 [https://www.rust-lang.org/policies/licenses](https://www.rust-lang.org/policies/licenses)
@@ -472,7 +470,7 @@ non-owning "multicast" 式引用）。
 
 如果你翻译了这篇文章，请让我知道，这样我就可以链接到这里。我应该很快就能自己贴出德文翻译了。
 
-我建议对翻译中的代码片段使用与这里相同的许可结构，尽管这我无法强制你执行。
+我建议对翻译中的代码片段使用与这里相同的许可结构，尽管我无法强制你执行。
 如果翻译使用不同的许可证，你很可能仍然可以从 CC0 许可下的原始版本中获取所需的代码。
 
-（译者注：译文许可遵照原文。）
+（译者注：本译文许可遵照原文。）
