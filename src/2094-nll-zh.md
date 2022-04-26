@@ -1722,8 +1722,6 @@ impl Foo {
     * 它涉及的约束要少得多：仅仅用于连接不同点之间的变量类型时无需约束
     * 它也更自然地适用于表层语言，因为表层语言中的变量只有一种类型
 
-### Different "lifetime roles"
-
 ### 不同的“生命周期角色”
 
 在关于嵌套方法调用的讨论中（见 [RFC 2025](https://github.com/rust-lang/rfcs/pull/2025)
