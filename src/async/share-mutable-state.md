@@ -14,7 +14,7 @@
 
 [Shared mutable state in Rust]: https://github.com/Darksonn/ryhl.io/blob/master/content/blog/shared-mutable-state/index.md
 [Alice Ryhl]: https://github.com/Darksonn 
-[Actors with tokio]: https://github.com/Darksonn/ryhl.io/blob/master/content/blog/actors-with-tokio/index.md
+[Actors with tokio]: ./actors-with-tokio.md
 [`r2d2`]: https://crates.io/crates/r2d2
 [`bb8`]: https://crates.io/crates/bb8
 
