@@ -10,3 +10,5 @@
 - [Async]()
     - [共享可变状态](./async/share-mutable-state.md)
     - [actors](./async/actors-with-tokio.md)
+- [Rust-lang blog]()
+    - [贡献诊断翻译](./rust-lang-blog/diagnostic-translation.md)
