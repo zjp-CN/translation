@@ -75,7 +75,7 @@ error: el tipo de retorno se debe indicar mediante `->`
 
 ### (二) 准备移植诊断
 
-`rustc` 中几乎所有的诊断都是使用传统的 `DiagnoticBuilder` 接口实现的，如下所示：
+`rustc` 中几乎所有的诊断都是使用传统的 `DiagnosticBuilder` 接口实现的，如下所示：
 
 ```rust,ignore
 self.struct_span_err(self.prev_token.span, "return types are denoted using `->`")
@@ -101,12 +101,12 @@ self.struct_span_err(self.prev_token.span, "return types are denoted using `->`"
 
 有两种方式可以将诊断程序移植到新的基础设施：
 
-1. 如果这是一个简单的诊断，没有任何逻辑来决定是否添加建议、注释、帮助或标签，则[使用诊断派生宏]
-2. [手动实现] `SessionDiagnotic`
+1. 如果这是一个简单的诊断，没有任何逻辑来决定是否添加建议、注意、帮助或标签，则[使用诊断派生宏]
+2. [手动实现] `SessionDiagnostic`
 
 在这两种情况下，诊断都表示为类型。使用类型表示诊断是诊断工作组的一个目标，因为它有助于将诊断逻辑与主代码路径分开。
 
-每种诊断类型都应该实现 `SessionDiagnotic` （无论手动或自动）。在
+每种诊断类型都应该实现 `SessionDiagnostic` （无论手动或自动）。在
 `SessionDiagnostic` trait 中，有一个成员函数，它把此 trait 转换为要发出的 `Diagnostic`。
 
 [rustc-dev-error]: https://rustc-dev-guide.rust-lang.org/diagnostics.html#error-messages
@@ -117,7 +117,7 @@ self.struct_span_err(self.prev_token.span, "return types are denoted using `->`"
 
 诊断派生宏有：
 
-- 用于整体诊断的 `SessionDiagnotic`
+- 用于整体诊断的 `SessionDiagnostic`
 - 用于部分诊断的 `SessionSubdiagnostic`
 - 用于 lints 的 `DecorateLint`
 
@@ -153,11 +153,13 @@ struct ReturnTypeArrow {
 }
 ```
 
-每个诊断都应该有一个唯一的路径 (slug)。习惯上，总是以与错误相关的 crate 开头（本例中为 `parser::return_type_arrow`）。
+每个诊断都应该有一个唯一的路径 （slug，本例中为 `parser::return_type_arrow`）。
+
+习惯上，总是以与错误相关的 crate 开头（本例中为 `parser`）。
 
 这个路径将用于在翻译资源中查找实际的诊断消息，很快就会介绍到。
 
-最后，添加任何标签 (labels)、注释 (notes)、帮助 (helps) 或建议 (suggestions)：
+最后，添加任何标签 (labels)、注意 (notes)、帮助 (helps) 或建议 (suggestions)：
 
 ```rust,ignore
 #[derive(SessionDiagnostic)]
@@ -179,9 +181,9 @@ struct ReturnTypeArrow {
 
 #### 手动实现 `SessionDiagnostic`
 
-有些诊断太复杂，无法使用派生宏从诊断类型生成诊断。此时，可以手动实现 `SessionDiagnotic`。
+有些诊断太复杂，无法使用派生宏从诊断类型生成诊断。此时，可以手动实现 `SessionDiagnostic`。
 
-使用与诊断派生宏相同的类型，像下面那样来手动实现 `SessionDiagnotic`：
+使用与诊断派生宏相同的类型，像下面那样来手动实现 `SessionDiagnostic`：
 
 ```rust,ignore
 use rustc_errors::{fluent, SessionDiagnostic};
