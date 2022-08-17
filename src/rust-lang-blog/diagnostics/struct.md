@@ -7,7 +7,7 @@
 rustc 有两个诊断派生宏 (diagnostic derives)，可用于创建简单的诊断，建议在合适的地方使用：
 `#[derive(SessionDiagnostic)]` 和 `#[derive(SessionSubdiagnostic)]`。
 
-使用派生宏创建的诊断可以翻译成不同的语言，并且每种语言都有一个唯一标识诊断的开头 (slug)。
+使用派生宏创建的诊断可以翻译成不同的语言，并且每种语言都有一个唯一标识诊断的路径 (slug)。
 
 ## `SessionDiagnostic`
 
@@ -43,7 +43,7 @@ pub struct FieldAlreadyDeclared {
 指定 `code` 不是必需的，但如果你要移植的诊断使用 `DiagnoticBuilder`，那么如果有错误码的话，使用
 `SessionDiagnostic` 时应保留错误码。
 
-`#[error(...)]` 和 `#[warning(...)]` 都必须提供一个开头 (slug) 作为第一个位置参数（即一个通向
+`#[error(...)]` 和 `#[warning(...)]` 都必须提供一个路径 (slug) 作为第一个位置参数（即一个通向
 `rustc_errors::fluent::*` 中的条目的路径）。
 
 slug 唯一地标识了诊断，也是编译器知道要发出什么错误消息的方式（在编译器的默认 locale 中，或者在用户要求的 

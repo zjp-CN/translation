@@ -149,9 +149,9 @@ struct ReturnTypeArrow {
 }
 ```
 
-每个诊断都应该有一个唯一的开头 (slug) 。习惯上，总是以与错误相关的 crate 开头（本例中为 `parser`）。
+每个诊断都应该有一个唯一的路径 (slug)。习惯上，总是以与错误相关的 crate 开头（本例中为 `parser::return_type_arrow`）。
 
-这个开头将用于在翻译资源中查找实际的诊断消息，很快就会介绍到。
+这个路径将用于在翻译资源中查找实际的诊断消息，很快就会介绍到。
 
 最后，添加任何标签 (labels)、注释 (notes)、帮助 (helps) 或建议 (suggestions)：
 
@@ -219,7 +219,7 @@ impl SessionDiagnostic for ReturnTypeArrow {
 
 #### 添加翻译资源
 
-在诊断派生宏或手动实现的类型化标识符中，其开头都需要与翻译资源中的消息相对应。
+在诊断派生宏或手动实现的类型化标识符中，其 slug 都需要与翻译资源中的消息相对应。
 
 `rustc` 使用的是 [Fluent]，这是一种非对称翻译系统。
 
