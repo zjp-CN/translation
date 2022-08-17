@@ -12,6 +12,7 @@ title = "Rust 文章翻译"
 [output.html]
 default-theme = "ayu"
 git-repository-url = "https://github.com/zjp-CN/translation"
+edit-url-template = "https://github.com/zjp-CN/translation/edit/main/{path}"
 additional-css = ["theme/pagetoc.css"]
 additional-js = ["theme/pagetoc.js"]
 
