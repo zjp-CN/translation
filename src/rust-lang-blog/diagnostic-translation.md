@@ -1,5 +1,9 @@
 # 贡献诊断翻译
 
+> 原文：[Contribute to the diagnostic translation effort!]
+
+[Contribute to the diagnostic translation effort!]: https://blog.rust-lang.org/inside-rust/2022/08/16/diagnostic-effort.html
+
 ## 翻译的诊断
 
 Rust 诊断工作小组正在领导一项工作，以增加对编译器中错误消息国际化的支持，允许编译器以英语以外的语言生成输出。
