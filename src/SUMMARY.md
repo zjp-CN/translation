@@ -14,3 +14,4 @@
     - [贡献诊断翻译](./rust-lang-blog/diagnostic-translation.md)
         - [struct](./rust-lang-blog/diagnostics/struct.md)
         - [translation](./rust-lang-blog/diagnostics/translation.md)
+- [RustConf2022](./RustConf2022.md)
