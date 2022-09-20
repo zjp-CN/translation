@@ -15,3 +15,5 @@
         - [struct](./rust-lang-blog/diagnostics/struct.md)
         - [translation](./rust-lang-blog/diagnostics/translation.md)
 - [RustConf2022](./RustConf2022.md)
+- [dyn async traits 系列]()
+    - [第一篇：解语法糖](./dyn-async-traits/2021-09-30-dyn-async-traits-part-1.md)
