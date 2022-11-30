@@ -1,5 +1,6 @@
 # Dyn Async Traits
 
+[原文](https://smallcultfollowing.com/babysteps/blog/2021/09/30/dyn-async-traits-part-1/) |
 日期：2021-09-30 10:50 -0400
 
 在过去的几周里，[Tyler Mandry] 和我一直在努力研究如何在 trait 中实现异步函数。

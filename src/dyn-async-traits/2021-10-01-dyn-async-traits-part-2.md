@@ -1,5 +1,6 @@
 # Dyn Async Traits
 
+[原文](https://smallcultfollowing.com/babysteps/blog/2021/10/01/dyn-async-traits-part-2/) |
 日期：2021-10-01 11:56 -0400
 
 在[上一篇][previous]文章中，我们揭示了 `dyn` 和异步 traits 的一个关键挑战：在今天的 Rust 中， `dyn` 类型必须指定所有关联类型的值。

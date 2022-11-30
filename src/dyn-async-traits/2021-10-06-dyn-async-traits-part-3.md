@@ -1,5 +1,6 @@
 # Dyn Async Traits
 
+[原文](https://smallcultfollowing.com/babysteps/blog/2021/10/06/dyn-async-traits-part-3/) |
 日期：2021-10-06 11:06 -0400
 
 在前一篇文章中，我谈到了编译器是如何执行动态分发的 impl。
