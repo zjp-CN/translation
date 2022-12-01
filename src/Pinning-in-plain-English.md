@@ -1,6 +1,6 @@
 # 用通俗易懂的英语解释 pinning
 
-<img src="img/chiral.png" alt="" width="500"/>
+<img src="https://user-images.githubusercontent.com/25300418/204944297-7620ad13-8e96-4cea-8138-ad1b6646c64d.png" alt="" width="500"/>
 
 由 [Tamme Schichler](https://hashnode.com/@Tamme) 所写，发布于 2021 年 11 月 25 日，预计阅读完需要 15 分钟。
 [点击查看原文][original-post]，以及原文的[讨论][discussion]。
