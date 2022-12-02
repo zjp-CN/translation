@@ -39,6 +39,7 @@ jobs:
           name: book
           path: book/
           workflow: build.yml
+          if_no_artifact_found: warn
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
