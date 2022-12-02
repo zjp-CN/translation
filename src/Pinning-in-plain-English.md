@@ -219,18 +219,18 @@ pub fn pin(x: T) -> Pin<Box<T>> { … }
 
 # pinning 是一个仅存在于编译时的概念
 
-`Pin<P>` 是对其单个成员 [`#[repr(transparent)]`][repr-transparent] 的包装，是 `P` 类型的私有字段。
+`Pin<P>` 对其单个私有字段类型 `P` 进行 [`#[repr(transparent)]`][repr-transparent] 包装。
 
 [repr-transparent]: https://doc.rust-lang.org/stable/reference/type-layout.html#the-transparent-representation
 
 换句话说：**`Pin<Box<T>>` 与 `Box<T>` 具有完全相同的运行时表现。**
 
-反过来，由于 `Box<T>` 又具有与其派生的 `&T` 有相同的运行时表现，因此得到 `&T` 的 `Pin<Box<T>` 
-解引用是一个标识函数，这个函数返回与它进入函数运行后得到完全相同的值，这意味着（但只有优化之后！）根本不需要运行时操作。
+反过来，由于 `Box<T>` 又具有与其派生的 `&T` 有相同的运行时表现，因此对 `Pin<Box<T>` 
+解引用得到 `&T` 其实是一个恒等函数 (identity function)，这个函数返回与入参完全一样的值，这意味着根本不需要运行时操作（但只有优化之后！）。
 
-将指针或容器转换为 pinning 版本之后操作同样自由 (free action) 。
+将指针或者容器转换为对应的 pinning 版本，这个操作同样没有运行时开销。
 
-这种自由是可能发生的，因为一旦涉及到引用，Rust 中的移动 (move)
+这种无运行时开销是可能发生的，因为一旦涉及引用，Rust 中的移动 (move)
 就已经相当显式：底层赋值可能隐藏在另一个方法中，但是 Rust 有告知之后才移动 heap 上的实例的机制。与 
 C# 不同，在 C# 中，pinning 是[集成到 GC API 中][C#-GC]的运行时操作。
 
