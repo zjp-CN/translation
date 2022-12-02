@@ -40,6 +40,8 @@ jobs:
           path: book/
           workflow: build.yml
           if_no_artifact_found: warn
+          # workaround: https://github.com/dawidd6/action-download-artifact/issues/147
+          run_id: 3599812694
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
