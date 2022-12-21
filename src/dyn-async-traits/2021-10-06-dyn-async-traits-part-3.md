@@ -47,9 +47,8 @@ type RuntimeType = ();
 let data_pointer: *mut RuntimeType = self as *mut ();
 ```
 
-Here, `self` is a wide pointer of type `&mut dyn Iterator<Item = I>`. The rules for `as` state that casting a wide pointer to a thin pointer drops the metadata[^ugh], so we can (ab)use that to get the data pointer. Here I just gave the pointer the type `*mut RuntimeType`, which is an alias for `*mut ()` — i.e., raw pointer to something. The type alias `RuntimeType` is meant to signify "whatever type of data we have at runtime". Using `()` for this is a hack; the "proper" way to model it would be with an existential type. But since Rust doesn` t have those, and I` m not keen to add them if we don` t have to, we` ll just use this type alias for now.
-
-这里，`self` 是 `&mut dyn Iterator<Item = I>` 类型的宽指针。`as` 的规则规定，将宽指针转换为细指针会丢弃 metadata[^ugh]，因此我们可以使用/滥用它来获取数据指针。
+这里，`self` 是 `&mut dyn Iterator<Item = I>` 类型的宽指针。`as` 的规则规定，将宽指针转换为细指针会丢弃
+metadata[^ugh]，因此我们可以使用/滥用它来获取数据指针。
 
 这里，我给指针的类型是 `*mut RuntimeType`，这是 `*mut()` 的别名 —— 即指向某个对象的原始指针。
 
