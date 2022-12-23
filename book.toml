@@ -5,6 +5,9 @@ multilingual = false
 src = "src"
 title = "Rust 文章翻译"
 
+[rust]
+edition = "2021"
+
 # [preprocessor.theme]
 # pagetoc = true
 # sidebar-width = "250px"
