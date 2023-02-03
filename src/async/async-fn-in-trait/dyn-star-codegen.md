@@ -1,6 +1,6 @@
 # `dyn*` 如何生成代码
 
-原文：[A Look at dyn* Code Generation](https://blog.theincredibleholk.org/blog/2022/12/12/dyn-star-codegen/) | by Eric Holk | 2022 年 12 月 12 日
+> 原文：[A Look at dyn* Code Generation](https://blog.theincredibleholk.org/blog/2022/12/12/dyn-star-codegen/) | by Eric Holk | 2022 年 12 月 12 日
 
 正如我以前写过的文章 [AFIT 如何在 rustc 中工作][AFIT-rustc] 所言，异步 Rust 的一个重要目标是在任何地方都支持异步函数，包括在 trait 对象 (`dyn Trait`) 中。
 

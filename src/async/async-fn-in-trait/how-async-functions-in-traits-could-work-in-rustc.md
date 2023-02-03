@@ -1,6 +1,6 @@
 # AFIT 如何在 rustc 中工作
 
-原文：[How Async Functions in Traits could Work in Rustc](raw) | by Eric Holk | 2022 年 4 月 18 日
+> 原文：[How Async Functions in Traits could Work in Rustc][raw] | by Eric Holk | 2022 年 4 月 18 日
 
 [raw]: https://blog.theincredibleholk.org/blog/2022/04/18/how-async-functions-in-traits-could-work-in-rustc/
 
