@@ -20,6 +20,7 @@
     - [async fn in traits](./async/async-fn-in-trait.md)
         - [AFIT 如何在 rustc 中工作](./async/async-fn-in-trait/how-async-functions-in-traits-could-work-in-rustc.md)
         - [`dyn*` 如何生成代码](./async/async-fn-in-trait/dyn-star-codegen.md)
+        - [trait object 中的异步函数](./async/async-fn-in-trait/async-fn-in-trait-object-update.md)
 - [dyn async traits 系列](./dyn-async-traits.md)
     - [解语法糖](./dyn-async-traits/2021-09-30-dyn-async-traits-part-1.md)
     - [dyn safety](./dyn-async-traits/2021-10-01-dyn-async-traits-part-2.md)
