@@ -11,6 +11,7 @@
     - [贡献诊断翻译](./rust-lang-blog/diagnostic-translation.md)
         - [struct](./rust-lang-blog/diagnostics/struct.md)
         - [translation](./rust-lang-blog/diagnostics/translation.md)
+    - [nightly 可用 AFIT](./rust-lang-blog/async-fn-in-trait-nightly.md)
 - [RustConf2022](./RustConf2022.md)
 - [Async]()
     - [共享可变状态](./async/share-mutable-state.md)
