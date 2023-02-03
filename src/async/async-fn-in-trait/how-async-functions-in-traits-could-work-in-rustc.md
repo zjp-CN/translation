@@ -17,7 +17,7 @@ Rust Async 工作组的主要目标之一是 [允许在任何允许使用 `fn` �
 我们希望以下程序能够运行。
 
 ```rust
-// 点击右上角按钮允许这段代码
+// 点击右上角按钮运行这段代码
 use std::sync::Arc;
 
 trait AsyncTrait {
