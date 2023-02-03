@@ -10,8 +10,9 @@ YTB 视频：
 
 | 时间       | 原文                                                | 译文                        |
 |------------|-----------------------------------------------------|-----------------------------|
+|
 | 2022/04/18 | [How Async Functions in Traits could Work in Rustc] | [AFIT 如何在 rustc 中工作]  |
-| 2022/12/12 | [How Async Functions in Traits could Work in Rustc] | [dyn* 如何生成代码]         |
+| 2022/12/12 | [A Look at dyn* Code Generation]                    | [dyn* 如何生成代码]         |
 | 2022/12/19 | [Async Functions in Trait Objects Update]           | [trait object 中的异步函数] |
 
 [How Async Functions in Traits could Work in Rustc]: https://blog.theincredibleholk.org/blog/2022/04/18/how-async-functions-in-traits-could-work-in-rustc
