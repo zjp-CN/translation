@@ -52,11 +52,15 @@ async fn use_counter(counter: &mut impl AsyncCounter) -> usize {
 
 下一步目前正在研究的是一种叫做 `dyn* Trait` 的新型 trait 对象。
 
-这为我们提供了异步函数作为对象时返回类型所需的部分解决方案。
+这为我们提供了异步函数返回值需要作为对象进行使用的部分解决方案。
 
-回想一下，`async fn foo() -> usize` 是 `fn foo() -> impl Future<Output=usize>` 的语法糖；在
-trait 中， `impl Future<Output=usinze>` 部分成为 trait 中的关联类型。在静态情况下，每个 impl
-都可以有自己的返回值类型，但在动态情况下，我们需要有一个适用于所有可能的 impl 的类型。换句话说，返回类型需要是动态的。
+回想一下：
+* `async fn foo() -> usize` 是 `fn foo() -> impl Future<Output = usize>` 的语法糖
+* 在 trait 中， `impl Future<Output = usize>` 成为 trait 中的关联类型
+* 在静态情况下，每个 impl 都可以有自己的返回值类型
+* 但在动态情况下，我们需要有一个适用于所有可能的 impl 的类型
+
+换句话说，异步函数的返回类型此时需要是动态的。
 
 [`async-trait`]: https://crates.io/crates/async-trait 
 
