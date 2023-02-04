@@ -53,9 +53,9 @@ async fn print_the_number_static(from: impl AsyncTrait) {
 } 
 ```
 
-我们将在 [静态 trait][static-traits] 一节中了解如何做到这一点。
+我们将在 [静态 trait][static traits] 一节中了解如何做到这一点。
 
-在本例中，`print_the_number` 函数动态调用 `get_number`。我们将在 [动态 trait][dynamic-traits] 那节探讨这一点。
+在本例中，`print_the_number` 函数动态调用 `get_number`。我们将在 [动态 trait][dynamic traits] 那节探讨这一点。
 
 [static traits]: #static-traits
 
