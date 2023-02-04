@@ -1,6 +1,6 @@
 # trait object 中的异步函数
 
-> 原文：[Async Functions in Trait Objects Update](https://blog.theincredibleholk.org/blog/2022/12/19/async-fn-in-trait-object-update)
+> 原文：[Async Functions in Trait Objects Update](https://blog.theincredibleholk.org/blog/2022/12/19/async-fn-in-trait-object-update/)
 > | by Eric Holk | 2022 年 12 月 19 日
 
 2022 年即将结束，我想花点时间看看我们在 dyn traits 中支持异步函数的情况（AFIDT），并就如何在 2023 年取得进展提出一些建议。
@@ -411,7 +411,7 @@ impl AsyncCounter for MyCounter {
 }
 ```
 
-这将编译（如果你添加了足够的 trait 标志，现在确实可以编译一些类似的东西），但这不是很好。
+这将编译（如果你添加了足够的 feature 标志，现在确实可以编译一些类似的东西），但这不是很好。
 
 这比我想的还要冗长。这也意味着你必须决定何时执行该实现，它是否将是 dyn-safe。
 
@@ -483,7 +483,7 @@ async fn call_dyn_use_counter(counter: &mut MyCounter) -> usize {
 
 可能还有其他方法可行，但真正强大的方法可能需要新的语言 features。
 
-#### Higher Order Impls
+#### higher order impls
 
 当我看到编译器或标准库可以做程序员无法用这种语言做的事情时，我常常认为这是表明该语言缺少某些功能。
 
@@ -560,7 +560,7 @@ dyn-safe 包装器问题，该问题也适用于其他领域。例如，现在�
 其次，我认为剩下的设计问题将从大量简化中受益。希望有一些最小可行的子集，可以满足真正的使用者需求，具有良好的人机工程学，而无需等待
 higher order impls 等推测性的功能。
 
-找到正确的子集需要一些时间，但我认为 Rust 项目在以前的经历中关注于对找到正确的一组功能是 Rust 今天成为伟大语言的重要原因！
+找到正确的子集需要一些时间，但我认为 Rust 项目在以前的经历中关注于找到正确的一组功能，这是 Rust 今天成为伟大语言的重要原因！
 
 我很高兴在这个领域有这么多有趣的问题要解决，我期待着异步 Rust 的 2023 年！
 
