@@ -52,7 +52,7 @@ async fn use_counter(counter: &mut impl AsyncCounter) -> usize {
 
 下一步目前正在研究的是一种叫做 `dyn* Trait` 的新型 trait 对象。
 
-这为我们提供了异步函数返回值需要作为对象进行使用的部分解决方案。
+这为我们提供了一部分方案来解决异步函数返回值需要作为对象进行使用。
 
 回想一下：
 * `async fn foo() -> usize` 是 `fn foo() -> impl Future<Output = usize>` 的语法糖
