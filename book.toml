@@ -10,7 +10,8 @@ edition = "2021"
 
 # [preprocessor.theme]
 # pagetoc = true
-# sidebar-width = "250px"
+# sidebar-width = "300px"
+# sidebar-font-size = "0.9em"
 
 [output.html]
 default-theme = "ayu"
