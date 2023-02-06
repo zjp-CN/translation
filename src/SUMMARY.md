@@ -33,3 +33,5 @@
         - [解释“Rust 之魂”](./dyn-async-traits/2022-09-19-what-i-meant-by-the-soul-of-rust.md)
         - [新语法 `dyn*`](./dyn-async-traits/2022-03-29-dyn-can-we-make-dyn-sized.md)
     - [回应 RFC 2884](./dyn-async-traits/2022-09-21-dyn-async-traits-part-9-callee-site-selection.md)
+- [Stacked Borrows 系列]()
+    - [Rust 的别名模型](./stacked-borrows/stacked-borrows.md)
