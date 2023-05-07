@@ -34,4 +34,5 @@
         - [新语法 `dyn*`](./dyn-async-traits/2022-03-29-dyn-can-we-make-dyn-sized.md)
     - [回应 RFC 2884](./dyn-async-traits/2022-09-21-dyn-async-traits-part-9-callee-site-selection.md)
 - [Stacked Borrows 系列]()
-    - [Rust 的别名模型](./stacked-borrows/stacked-borrows.md)
+    - [（旧）Rust 的别名模型](./stacked-borrows/stacked-borrows.md)
+    - [（较新）实现栈借用](./stacked-borrows/stacked-borrows-implementation.md)

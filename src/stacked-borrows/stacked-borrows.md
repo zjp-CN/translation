@@ -24,12 +24,12 @@
 * 而 Stacked Borrows 是（在某种程度上）基于“可达性” (access) 的模型。
 
 > 更新：发布这篇文章之后，我又写了另一篇[^another] 博客文章，内容是关于栈借用的一个略微调整的版本（也是第一个实际实现的版本）。
-> 那篇文章是独立的，所以如果你只对栈借用的现状感兴趣，我建议你去看那篇。如果你想了解更多的历史背景，请继续阅读。
+> <u>**那篇文章是独立的，所以如果你只对栈借用的现状感兴趣，我建议你去看那篇。如果你想了解更多的历史背景，请继续阅读。**</u>
 
 [^another]: 译者注：那篇原文链接 [在此][implementation]，翻译 [在此][implementation-zh]。
 
 [implementation]: https://www.ralfj.de/blog/2018/11/16/stacked-borrows-implementation.html
-<!-- TODO: [implementation-zh]: TODO -->
+[implementation-zh]: ./stacked-borrows-implementation.md
 
 ## 1. 基于有效性与基于可达性
 
