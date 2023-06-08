@@ -191,11 +191,11 @@ fn print_me_later(x: dyn* Debug + '_) -> impl FnOnce() + '_ {
 反而，人们通常会手动定义这些指针的 trait，例如 `Iterator` trait 有这样的实现：
 
 ```rust,ignore
-impl<I> for &mut I
+impl<I> Iterator for &mut I
 where
     I: ?Sized + Iterator
 
-impl<I> for Box<I>
+impl<I> Iterator for Box<I>
 where
     I: ?Sized + Iterator
 ```
