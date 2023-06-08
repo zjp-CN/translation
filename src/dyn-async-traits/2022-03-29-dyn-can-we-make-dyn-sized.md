@@ -166,7 +166,7 @@ fn print_me_later(x: dyn* Debug + '_) -> impl FnOnce() + '_ {
 
 许多事情对于 `dyn Trait` 的值来说很难，但对于 `dyn* Trait` 的值来说却很容易：
 
-* 按值的 `self` 方法可以很好地工作：`dyn*Trait` 的值是有大小的，所以只需复制它的字节就可以移动它的所有权。
+* 按值的 `self` 方法可以很好地工作：`dyn* Trait` 的值是有大小的，所以只需复制它的字节就可以移动它的所有权。
 * 返回 `Self`，就像在 `Clone` trait 中一样，良好地工作。
     * 同样 `trait Clone: Sized` 并不意味着 `dyn* Clone` 不能实现 `Clone`，尽管它确实意味 `dyn Clone: Clone` 不成立
 * 函数参数中的 `impl ArgTrait` 类型可以转换为 `dyn* ArgTrait`，只要 `ArgTrait` 是 `dyn*` safe
@@ -225,7 +225,7 @@ trait WidgetContainer {
 
 我可以编写一个接收 `&mut dyn WidgetContainer` 的函数，它将能够同时调用这两个方法。如果该函数接收 `&dyn WidgetContainer`，则只能调用`num_components`。
 
-如果我们不做其他任何事情，这种灵活性将在 `dyn*` 中丧失。假设我们希望从某个 `&impl WidgetContainer` 类型创建一个 `dyn*WidgetContainer`。
+如果我们不做其他任何事情，这种灵活性将在 `dyn*` 中丧失。假设我们希望从某个 `&impl WidgetContainer` 类型创建一个 `dyn* WidgetContainer`。
 
 要做到这一点，我们需要为 `&T` 实现 `WidgetContainer`，但我们无法编写该代码，至少不能在不引起 panic 的情况下编写代码：
 
@@ -320,7 +320,7 @@ dyn trait Foo { }
         * 返回 impl Trait 的方法：`fn iter(&self) -> impl Iterator`
         * 返回 `Self` 类型的方法：`fn clone(&self) -> Self`
 * 这会引发一些我们必须处理的问题，但所有这些都是有用的：
-    * 你需要 `dyn &Trait` 和其他东西来“选择”方法集
+    * 你需要 `&dyn Trait` 和其他东西来“选择”方法集
     * 你需要更符合人体工程学的方法来确保 `Box<Trait>: Trait` 等等
 * 我们可以通过引入两个语法在 Rust 2024 合理地过渡到这个模型：`dyn*`（指针大小）和 `dyn[..]`（未知大小），然后更改 `dyn` 的含义
 
