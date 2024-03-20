@@ -20,6 +20,8 @@
 [spawning]: https://tokio.rs/tokio/tutorial/spawning
 [channel]: https://tokio.rs/tokio/tutorial/channels
 
+本文与 [这个演讲](https://www.youtube.com/watch?v=fTXuGRP1ee4) 内容一致。
+
 ## 什么是 actor
 
 在我们讨论如何写 actor 之前，需要知道 actor 是什么。
@@ -32,8 +34,6 @@ actor 的一个常见用例是将你想要共享的某些资源的独占所有�
 例如，如果你正在实现聊天服务器，则可以为每个连接生成一个任务，并在其他任务之间生成一个在聊天消息之间发送聊天消息的主任务。
 
 这很有用，因为主任务可以避免处理网络 IO，而连接任务可以专门专注于处理网络 IO。
-
-本文与 [这个演讲](https://www.youtube.com/watch?v=fTXuGRP1ee4) 内容一致。
 
 ## 典型步骤
 
