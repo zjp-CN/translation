@@ -35,5 +35,6 @@
     - [回应 RFC 2884](./dyn-async-traits/2022-09-21-dyn-async-traits-part-9-callee-site-selection.md)
 - [Stacked Borrows 系列]()
     - [【原提案】Rust 的别名模型](./stacked-borrows/stacked-borrows.md)
-    - [【提案改进】实现栈借用](./stacked-borrows/stacked-borrows-implementation.md)
+    - [【版本 1】实现栈借用](./stacked-borrows/stacked-borrows-implementation.md)
     - [栈借用中的屏障与两阶段借用](./stacked-borrows/stacked-borrows-barriers.md)
+    - [【版本 2】栈借用](./stacked-borrows/stacked-borrows-2.md)
