@@ -17,6 +17,7 @@
     - [共享可变状态](./async/share-mutable-state.md)
     - [actors](./async/actors-with-tokio.md)
     - [cancellation](./async/cancellation.md)
+        - [异步析构函数、异步通用性和保证完成的 Future](./cancellation/sabrina.md)
     - [async fn in traits](./async/async-fn-in-trait.md)
         - [AFIT 如何在 rustc 中工作](./async/async-fn-in-trait/how-async-functions-in-traits-could-work-in-rustc.md)
         - [`dyn*` 如何生成代码](./async/async-fn-in-trait/dyn-star-codegen.md)
